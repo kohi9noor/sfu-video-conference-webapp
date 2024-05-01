@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mediasoup Client</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto my-10 max-w-lg">
+      <div id="login">
+        <br />
+        <i class="fas fa-server"> Room: </i
+        ><input
+          id="roomidInput"
+          value="123"
+          type="text"
+          class="w-full px-3 py-2 mb-3 border rounded-md"
+        />
+        <i class="fas fa-user"> User: </i
+        ><input
+          id="nameInput"
+          value="user"
+          type="text"
+          class="w-full px-3 py-2 mb-3 border rounded-md"
+        />
+        <button
+          id="joinButton"
+          class="w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-sign-in-alt"></i> Join
+        </button>
+      </div>
+
+      <div id="control" class="hidden">
+        <br />
+        <button
+          id="exitButton"
+          class="hidden w-full bg-red-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-arrow-left"></i> Exit
+        </button>
+        <button
+          id="copyButton"
+          class="hidden w-full bg-gray-500 text-white py-2 rounded-md"
+        >
+          <i class="far fa-copy"></i> Copy URL
+        </button>
+        <button
+          id="devicesButton"
+          class="hidden w-full bg-gray-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-cogs"></i> Devices
+        </button>
+        <button
+          id="startAudioButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-volume-up"></i> Open Audio
+        </button>
+        <button
+          id="stopAudioButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-volume-up"></i> Close Audio
+        </button>
+        <button
+          id="startVideoButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-camera"></i> Open Video
+        </button>
+        <button
+          id="stopVideoButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-camera"></i> Close Video
+        </button>
+        <button
+          id="startScreenButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-desktop"></i> Open Screen
+        </button>
+        <button
+          id="stopScreenButton"
+          class="hidden w-full bg-blue-500 text-white py-2 rounded-md"
+        >
+          <i class="fas fa-desktop"></i> Close Screen
+        </button>
+        <br /><br />
+        <div id="devicesList" class="hidden">
+          <i class="fas fa-microphone"></i> Audio:
+          <select
+            id="audioSelect"
+            class="form-select"
+            style="width: auto"
+          ></select>
+          <br />
+          <i class="fas fa-video"></i> Video:
+          <select
+            id="videoSelect"
+            class="form-select"
+            style="width: auto"
+          ></select>
+        </div>
+        <br />
+      </div>
+
+      <div id="videoMedia" class="hidden">
+        <h4><i class="fab fa-youtube"></i> Local Media</h4>
+        <div id="localMedia" class="containers"></div>
+        <br />
+        <h4><i class="fab fa-youtube"></i> Remote Media</h4>
+        <div id="remoteVideos" class="containers"></div>
+        <div id="remoteAudios"></div>
+      </div>
+    </div>
+
+    <script src="main.js" type="module">
+      // Your RoomClient class definition and logic here
+    </script>
+  </body>
+</html>
